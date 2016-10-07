@@ -1,0 +1,145 @@
+body {
+    background:#000000;
+    background:url('../images/bgcty.jpg') no-repeat #000000;
+}
+
+h1 a:link, h1 a:visited, h1 a:active {
+    color:white;
+}
+
+#content {
+    position:relative;
+    background:url('../images/header.png') repeat-x;
+    background-color:#DED7D1;
+    width:1000px;
+    min-height:1000px;
+    margin:0 auto;
+    padding-left:10px;
+    padding-top:5px;
+    box-shadow: 10px 10px 5px #000000;
+    outline: red;
+    border-radius: 15px 15px 0 0;
+}
+
+#clear {
+    height:100px;
+}
+
+#footer {
+    background:url('../images/header.png') repeat-x left 15px;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    padding-top:5px;
+    margin-left:-10px;
+    text-align:center;
+    height:40px;
+}
+
+#loginform {
+    padding-top:2%;
+}
+
+.notificationerror {
+    width:50%;
+    height:50px;
+    margin-top:5%;
+    padding-left:15px;
+    padding-top:15px;
+    border: 1px solid red;
+    border-radius:10px;
+    background-color: #FAB4B4;
+    
+}
+
+#icos {
+    max-width:70%;
+}
+
+#addpost_form {
+    padding-top:2%;
+}
+
+#post_text{
+    width:70%;
+}
+
+#posts {
+    margin-right:30%;
+    padding-left:15px;
+}
+
+#posts a:link, #posts a:visited, #posts a:active {
+    color:black;
+}
+
+#posts a:hover {
+    color:red;
+}
+
+#post_content {
+    padding-left:10px;
+}
+
+.frontpage {
+    font-family:'Verdana',Arial,sans-serif;
+    font-size:14px;
+    font-shadow: 2px;
+}
+
+.frontpage a:link, .frontpage a:active, .frontpage a:visited {
+    font-family:'Verdana',Arial,sans-serif;
+    font-size:14px;
+    font-shadow: 2px;
+    color:white;
+}
+
+#sidebar a:link, #sidebar a:visited, #sidebar a:active {
+    color:black;
+}
+
+#sidebar a:hover {
+    color:red;
+}
+
+#sidebar {
+    position:absolute;
+    background:url('../images/header.png') repeat-x;
+    color:black;
+    right:10px;
+    top:40px;
+    width:200px;
+    height:300px;
+    border:1px solid black;
+    padding-top:20px;
+    border-radius: 15px 15px 0 0;
+}
+
+a:link {
+    text-decoration:none;
+}
+a:active {
+    text-decoration:none;
+}
+
+a:visited {
+    text-decoration:none;
+}
+
+#menu {
+    font-weight:  bold;
+}
+
+.frontpage a:hover {
+    color:red;
+}
+
+#header {
+    text-align:center;
+    font-family:'Impact',Arial,sans-serif;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}

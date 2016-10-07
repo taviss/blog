@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Textarea with buttons to format text</title>
+<style type="text/css">
+.code{max-height:500px;min-width:28em;margin:1.2em 5px 1.5em 2.8em;background:yellow;border:1px solid #bbb;font-size:14px;padding:2px 3px 6px 3px;color:#0101ff;overflow:auto;word-wrap:break-word;font-weight:800;}
+#formc, blockquote{
+ margin:8px auto;
+ background:#e8e9fe;
+ padding:5px;
+}
+h2 {margin:12px auto 28px auto;text-align:center;}
+</style>
+</head>
+<body>
+<h2>Textarea with buttons to format text</h2>
+
+
+<form name="formc" id="formc" method="post" action="script.php" style="position:relative;width:360px;text-align:center;">
+ <div id="getcolor" style="display:none;margin:3px auto;background:#fff;">Colors</div>
+ <div id="icos">
+  <img src="icos/bold.png" alt="B" title="b" class="addtag" style="cursor:pointer;border:none;" onclick="addTag(this)" />
+  <img src="icos/italic.png" alt="I" title="i" class="addtag" style="cursor:pointer;border:none;" onclick="addTag(this)" />
+  <img src="icos/underline.png" alt="U" title="u" class="addtag" style="cursor:pointer;border:none;" onclick="addTag(this)" />
+  <img src="icos/url.png" alt="Link" title="Link" class="seturl" style="cursor:pointer;border:none;" onclick="setUrl()" />&nbsp;
+  <img src="icos/color.png" alt="Color" title="Color" style="cursor:pointer;border:none;" onclick="document.getElementById('getcolor').style.display='block'" />
+  <img src="icos/0.gif" alt=":)" title=":)" class="addsmile" style="cursor:pointer;border:none;" onclick="addSmile(this)" />
+  <img src="icos/1.gif" alt=":(" title=":(" class="addsmile" style="cursor:pointer;border:none;" onclick="addSmile(this)" />
+  <img src="icos/2.gif" alt=":P" title=":P" class="addsmile" style="cursor:pointer;border:none;" onclick="addSmile(this)" />
+  <img src="icos/3.gif" alt=":D" title=":D" class="addsmile" style="cursor:pointer;border:none;" onclick="addSmile(this)" />
+  <img src="icos/4.gif" alt=":S" title=":S" class="addsmile" style="cursor:pointer;border:none;" onclick="addSmile(this)" />
+  <img src="icos/5.gif" alt=":O" title=":O" class="addsmile"  style="cursor:pointer;border:none;" onclick="addSmile(this)" />
+  <img src="icos/6.gif" alt=":=)" title=":=)" class="addsmile" style="cursor:pointer;border:none;" onclick="addSmile(this)" />
+  <img src="icos/7.gif" alt=":|H" title=":|H" class="addsmile" style="cursor:pointer;border:none;" onclick="addSmile(this)" />
+  <img src="icos/8.gif" alt=":X" title=":X" class="addsmile" style="cursor:pointer;border:none;" onclick="addSmile(this)" />
+  <img src="icos/9.gif" alt=":-*" title=":-*" class="addsmile" style="cursor:pointer;border:none;" onclick="addSmile(this)" />
+ </div>
+ <textarea name="txtmsg" id="txtmsg" cols="41" rows="7"></textarea><br/>
+ <input type="submit" value="Submit" id="submit" />
+</form>
+<script src="addformat.js" type="text/javascript"></script>
+
+
+<br/><br/>
+To add this form in your web page, copy the files: "<b>addformat.js</b>", "<b>script.php</b>", and the "<b>icos</b>" folder on your server, then, in the page in which you want to display this form, add this code:
+<pre class="code">
+&lt;form name=&quot;formc&quot; id=&quot;formc&quot; method=&quot;post&quot; action=&quot;script.php&quot; style=&quot;position:relative;width:360px;text-align:center;&quot;&gt;
+ &lt;div id=&quot;getcolor&quot; style=&quot;display:none;margin:3px auto;background:#fff;&quot;&gt;Colors&lt;/div&gt;
+ &lt;div id=&quot;icos&quot;&gt;
+  &lt;img src=&quot;icos/bold.png&quot; alt=&quot;B&quot; title=&quot;b&quot; class=&quot;addtag&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addTag(this)&quot; /&gt;
+  &lt;img src=&quot;icos/italic.png&quot; alt=&quot;I&quot; title=&quot;i&quot; class=&quot;addtag&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addTag(this)&quot; /&gt;
+  &lt;img src=&quot;icos/underline.png&quot; alt=&quot;U&quot; title=&quot;u&quot; class=&quot;addtag&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addTag(this)&quot; /&gt;
+  &lt;img src=&quot;icos/url.png&quot; alt=&quot;Link&quot; title=&quot;Link&quot; class=&quot;seturl&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;setUrl()&quot; /&gt;&amp;nbsp;
+  &lt;img src=&quot;icos/color.png&quot; alt=&quot;Color&quot; title=&quot;Color&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;document.getElementById('getcolor').style.display='block'&quot; /&gt;
+  &lt;img src=&quot;icos/0.gif&quot; alt=&quot;:)&quot; title=&quot;:)&quot; class=&quot;addsmile&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addSmile(this)&quot; /&gt;
+  &lt;img src=&quot;icos/1.gif&quot; alt=&quot;:(&quot; title=&quot;:(&quot; class=&quot;addsmile&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addSmile(this)&quot; /&gt;
+  &lt;img src=&quot;icos/2.gif&quot; alt=&quot;:P&quot; title=&quot;:P&quot; class=&quot;addsmile&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addSmile(this)&quot; /&gt;
+  &lt;img src=&quot;icos/3.gif&quot; alt=&quot;:D&quot; title=&quot;:D&quot; class=&quot;addsmile&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addSmile(this)&quot; /&gt;
+  &lt;img src=&quot;icos/4.gif&quot; alt=&quot;:S&quot; title=&quot;:S&quot; class=&quot;addsmile&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addSmile(this)&quot; /&gt;
+  &lt;img src=&quot;icos/5.gif&quot; alt=&quot;:O&quot; title=&quot;:O&quot; class=&quot;addsmile&quot;  style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addSmile(this)&quot; /&gt;
+  &lt;img src=&quot;icos/6.gif&quot; alt=&quot;:=)&quot; title=&quot;:=)&quot; class=&quot;addsmile&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addSmile(this)&quot; /&gt;
+  &lt;img src=&quot;icos/7.gif&quot; alt=&quot;:|H&quot; title=&quot;:|H&quot; class=&quot;addsmile&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addSmile(this)&quot; /&gt;
+  &lt;img src=&quot;icos/8.gif&quot; alt=&quot;:X&quot; title=&quot;:X&quot; class=&quot;addsmile&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addSmile(this)&quot; /&gt;
+  &lt;img src=&quot;icos/9.gif&quot; alt=&quot;:-*&quot; title=&quot;:-*&quot; class=&quot;addsmile&quot; style=&quot;cursor:pointer;border:none;&quot; onclick=&quot;addSmile(this)&quot; /&gt;
+ &lt;/div&gt;
+ &lt;textarea name=&quot;txtmsg&quot; id=&quot;txtmsg&quot; cols=&quot;41&quot; rows=&quot;7&quot;&gt;&lt;/textarea&gt;&lt;br/&gt;
+ &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; id=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+&lt;script src=&quot;addformat.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</pre><br/>
+ - Form data are send to the "script.php". This file contains a PHP code that converts the bbcode into html.
+<br/><br/><br/>
+- By default, the buttons add BBcode and smile characters in textarea, if you want to add directly HTML tags, open the "<b>addformat.js</b>" file and replace the "<b><i>bbcode</i></b>" value of the <b>tagtype</b> variable (line 4) with "<b><i>html</i></b>".
+<blockquote><b>var tagtype = 'bbcode';</b></blockquote><br/>
+- To add other colors, edit the color code in the variable <b>colors</b> (line 7), the colors must be added with hexazecimal code (without '#'), between quotes.<br/>
+Example: Red, Green, Blue:
+<blockquote><b>var colors = [ 'ff0000', '00ff00', '0000ff' ];</b></blockquote><br/>
+ - To test online, click: <a href="http://coursesweb.net/javascript/texarea-buttons-format-text-colors-smiles_s2" title="Texarea with buttons to format text, colors and smiles">Texarea with buttons to format text, colors and smiles</a>.<br/>
+</body>
+</html>
